@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.srimohansalesservices</groupId>
-    <artifactId>SriMohanSalesServices</artifactId>
+    <artifactId>ShriMohanSalesAndServices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SriMohanSalesServices</name>
-    <description>SriMohanSalesServices</description>
+    <name>ShriMohanSalesAndServices</name>
+    <description>Shri-Mohan-Sales-Services</description>
     <url/>
     <licenses>
         <license/>
