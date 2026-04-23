@@ -5,6 +5,7 @@ import com.srimohansalesservices.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,5 +30,15 @@ public class UserService {
         return userRepository.findById(id)
                 .orElseThrow(() ->
                         new RuntimeException("User not found: " + id));
+    }
+
+    // Get All Users
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    // Delete User
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
     }
 }

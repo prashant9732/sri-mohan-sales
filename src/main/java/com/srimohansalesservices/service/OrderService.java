@@ -115,6 +115,12 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
+    // Get Orders by Status
+    public List<Order> getByStatus(
+            OrderStatus status) {
+        return orderRepository.findByStatus(status);
+    }
+
     // Sab orders (Admin)
 
     public List<Order> getAllOrders() {
