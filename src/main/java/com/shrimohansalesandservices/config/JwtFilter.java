@@ -64,6 +64,8 @@ public class JwtFilter extends OncePerRequestFilter {
                                 userDetails, null,
                                 userDetails.getAuthorities());
 
+                System.out.println("DEBUG: Authorities being granted: " + userDetails.getAuthorities());
+
                 auth.setDetails(
                         new WebAuthenticationDetailsSource()
                                 .buildDetails(request));

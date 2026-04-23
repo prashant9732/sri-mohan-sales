@@ -29,7 +29,11 @@ public class CustomUserDetailsService
                 .userdetails.User.builder()
                 .username(user.getEmail())
                 .password(user.getPassword())
-                .roles(user.getRole().name())
+
+                // .roles(...) hata kar yeh use karo:
+                //.roles(user.getRole().name())
+
+                .authorities("ROLE_" + user.getRole().name())
                 .build();
     }
 }

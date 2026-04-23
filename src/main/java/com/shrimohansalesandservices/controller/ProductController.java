@@ -26,6 +26,7 @@ public class ProductController {
     }
 
     // GET By ID - Public
+
     @GetMapping("/{id}")
     public ResponseEntity<Product> getById(
             @PathVariable Long id) {
@@ -34,6 +35,7 @@ public class ProductController {
     }
 
     // GET Search - Public
+
     @GetMapping("/search")
     public ResponseEntity<List<Product>> search(
             @RequestParam String keyword) {
@@ -52,6 +54,7 @@ public class ProductController {
     }
 
     // PUT Update - Admin Only
+
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Product> update(
@@ -62,6 +65,7 @@ public class ProductController {
     }
 
     // DELETE - Admin Only
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<?> delete(
